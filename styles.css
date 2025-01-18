@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 sloupce */
+    gap: 10px;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* zarovná galerii na střed */
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+
