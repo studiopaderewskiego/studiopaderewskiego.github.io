@@ -1,26 +1,38 @@
+/* Základní nastavení těla stránky */
 body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
 }
 
+/* Zarovnání hlavičky na střed */
 header {
-    padding: 20px;
     text-align: center;
+    margin: 20px 0;
 }
 
+h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: normal;
+}
+
+/* Nastavení galerie jako mřížky s mezerami */
 .gallery {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 sloupce */
-    gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Automatické sloupce s minimální šířkou 250px */
+    gap: 20px; /* Mezery mezi obrázky */
     padding: 20px;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto; /* zarovná galerii na střed */
+    max-width: 1200px; /* Maximální šířka galerie */
+    margin: 0 auto; /* Zarovná galerii na střed */
 }
 
+/* Styl pro obrázky v galerii */
 .gallery img {
-    width: 100%;
-    height: auto;
+    width: 100%; /* Obrázky se přizpůsobí šířce sloupce */
+    height: auto; /* Zachováme původní poměr stran */
+    border-radius: 15px; /* Zaoblené rohy obrázků */
+    border: 4px solid #1ee519; /* Zelený rámeček kolem obrázků */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
