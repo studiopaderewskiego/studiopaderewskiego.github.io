@@ -1,7 +1,7 @@
 /* Základní styl pro stránku */
 body {
     margin: 0;
-    font-family: Libre Baskerville, serif;
+    font-family: Arial, sans-serif;
     background-color: #000;
     color: white;
     display: flex;
@@ -55,30 +55,6 @@ h1 {
     animation-duration: 2s;
 }
 
-/* Styl pro textovou sekci */
-.about {
-    background-color: #b3b3b3; /* Šedá výplň rámečku */
-    color: #000; /* Černý text */
-    text-align: center; /* Zarovnání textu do středu */
-    padding: 40px 440px; /* Padding uvnitř rámečku */
-    border-radius: 15px; /* Zaoblené rohy */
-    width: 100%; /* Rozprostřeno na celou šířku displeje */
-    margin: 20px 0;
-    box-sizing: border-box; /* Aby padding neovlivňoval šířku */
-}
-
-.about h2 {
-    font-size: 6em;
-    color: #000; /* Černý nadpis */
-    margin-bottom: 15px;
-}
-
-.about p {
-    font-size: 2em;
-    color: #000; /* Černý text */
-    margin: 10px 0;
-}
-
 /* Styl pro footer */
 footer {
     text-align: center;
@@ -102,13 +78,5 @@ footer p {
 
     .slideshow-container {
         height: auto; /* Upravili jsme, aby galerie měla variabilní výšku */
-    }
-
-     .about h2 {
-        font-size: 1.5em;
-    }
-
-    .about p {
-        font-size: 0.9em;
     }
 }
