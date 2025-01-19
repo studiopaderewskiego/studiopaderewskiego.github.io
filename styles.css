@@ -104,4 +104,12 @@ footer p {
     .slideshow-container {
         height: auto; /* Upravili jsme, aby galerie měla variabilní výšku */
     }
+
+     .about h2 {
+        font-size: 1.5em;
+    }
+
+    .about p {
+        font-size: 0.9em;
+    }
 }
