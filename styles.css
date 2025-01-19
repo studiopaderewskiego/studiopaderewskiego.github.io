@@ -55,9 +55,29 @@ h1 {
     animation-duration: 2s;
 }
 
-@keyframes fade {
-    from {opacity: 0.4}
-    to {opacity: 1}
+/* Styl pro textovou sekci */
+.about {
+    background-color: #d3d3d3; /* Šedá výplň rámečku */
+    color: #000; /* Černý text */
+    text-align: center; /* Zarovnání textu do středu */
+    padding: 20px;
+    border-radius: 15px; /* Zaoblené rohy */
+    margin: 20px 10px;
+    max-width: 800px; /* Maximální šířka textového bloku */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.about h2 {
+    font-size: 2em;
+    color: #000; /* Černý nadpis */
+    margin-bottom: 15px;
+}
+
+.about p {
+    font-size: 1em;
+    color: #000; /* Černý text */
+    margin: 10px 0;
 }
 
 /* Styl pro footer */
