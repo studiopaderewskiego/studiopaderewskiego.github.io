@@ -9,28 +9,26 @@ body {
 
 /* Styl pro hlavičku stránky */
 header {
-    text-align: center;
+    text-align: center; /* Zarovnání nadpisu na střed */
     padding: 20px;
-    position: absolute; /* Umístění nad slideshow */
-    top: 0;
-    width: 100%;
+    position: relative; /* Zajištění pevného umístění nadpisu */
     z-index: 10;
+    margin-bottom: 30px; /* Přidání mezery pod nadpisem */
 }
 
 h1 {
-    font-size: 3em;
+    font-size: 3em; /* Velikost písma nadpisu na větších obrazovkách */
     color: #1ee519; /* Zelená barva */
     text-transform: uppercase;
     margin: 0;
+    word-wrap: break-word; /* Zajištění zalomení dlouhých slov na menších displejích */
 }
 
 /* Styl pro slideshow */
 .slideshow-container {
-    position: absolute;
-    top: 0;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 100%;
+    height: calc(100vh - 100px); /* Výška obrazovky kromě místa pro nadpis */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,10 +42,9 @@ h1 {
 }
 
 .mySlides img {
-    width: 100vw; /* Zajistí, že obrázky mají přesně šířku viewportu (obrazovky) */
+    width: 100vw; /* Obrázky mají šířku 100 % viewportu (obrazovky) */
     height: auto; /* Výška se přizpůsobí šířce obrázku */
-    object-fit: contain; /* Zachová celý obrázek bez oříznutí */
-    overflow: hidden;
+    object-fit: contain; /* Obrázek se přizpůsobí bez oříznutí */
 }
 
 /* Přechod efekt pro obrázky */
@@ -63,13 +60,14 @@ h1 {
 
 /* Media query pro mobilní zařízení */
 @media screen and (max-width: 768px) {
-    .mySlides img {
-        width: 100vw; /* Šířka obrázku bude vždy velikost obrazovky (viewport width) */
-        height: auto; /* Obrázky budou viditelné celé bez oříznutí */
-        object-fit: contain; /* Zajistí, že obrázek bude přizpůsoben bez oříznutí */
+    header h1 {
+        font-size: 1.5em; /* Zmenšení nadpisu pro menší obrazovky */
+        padding: 10px; /* Přidání vnitřního odsazení, aby se text nepřekrýval */
+        margin: 0;
+        word-wrap: break-word; /* Zalomení textu, pokud je moc dlouhý */
     }
 
-    header h1 {
-        font-size: 2em; /* Zmenšení velikosti textu pro menší obrazovky */
+    .slideshow-container {
+        height: calc(100vh - 80px); /* Úprava výšky na mobilu, aby nadpis nezakrýval obrázek */
     }
 }
