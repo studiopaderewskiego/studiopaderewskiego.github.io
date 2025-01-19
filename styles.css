@@ -57,7 +57,7 @@ h1 {
 
 /* Styl pro textovou sekci */
 .about {
-    background-color: #d3d3d3; /* Šedá výplň rámečku */
+    background-color: #b3b3b3; /* Šedá výplň rámečku */
     color: #000; /* Černý text */
     text-align: center; /* Zarovnání textu do středu */
     padding: 20px;
