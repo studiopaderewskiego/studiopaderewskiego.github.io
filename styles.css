@@ -69,9 +69,9 @@ h1 {
 
 /* Styl pro zúžení textu uvnitř sekce */
 .about .content {
-    max-width: 400px; /* Maximální šířka textu, nastavena na 400px */
+    max-width: 100px; /* Maximální šířka textu, nastavena na 100px */
     margin: 0 auto; /* Zarovnání textu na střed */
-    padding: 0 20px; /* Vnitřní odsazení pro extra prostor kolem textu */
+    padding: 0 50px; /* Vnitřní odsazení pro extra prostor kolem textu */
     word-wrap: break-word; /* Automatické zalamování dlouhých slov */
     overflow-wrap: break-word; /* Zajištění správného zalamování */
     line-height: 1.5; /* Větší řádkování pro lepší čitelnost */
