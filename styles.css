@@ -1,7 +1,7 @@
 /* Základní styl pro stránku */
 body {
     margin: 0;
-    font-family: Crimson Text, serif;
+    font-family: Libre Baskerville, serif;
     background-color: #000;
     color: white;
     display: flex;
