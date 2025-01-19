@@ -20,7 +20,7 @@ header {
 
 h1 {
     font-size: 3em;
-    color: #1ee519;
+    color: #b3b3b3;
     text-transform: uppercase;
     margin: 0;
     word-wrap: break-word;
@@ -70,7 +70,7 @@ footer {
 
 footer p {
     font-size: 0.8em; /* Malý text */
-    color: #1ee519; /* Zelená barva */
+    color: #b3b3b3; /* Zelená barva */
     margin: 0;
 }
 
