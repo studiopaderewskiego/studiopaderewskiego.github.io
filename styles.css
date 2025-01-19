@@ -67,6 +67,13 @@ h1 {
     box-sizing: border-box; /* Aby padding neovlivňoval šířku */
 }
 
+/* Styl pro zúžení textu uvnitř sekce */
+.about .content {
+    max-width: 800px; /* Maximální šířka textu uvnitř rámečku */
+    margin: 0 auto; /* Zarovnání textu na střed */
+    padding: 0 20px; /* Vnitřní odsazení pro extra prostor kolem textu */
+}
+
 .about h2 {
     font-size: 2em;
     color: #000; /* Černý nadpis */
