@@ -45,8 +45,8 @@ h1 {
 
 .mySlides img {
     width: 100vw; /* Zajistí, že obrázky mají přesně šířku viewportu (obrazovky) */
-    height: 100vh; /* Zajistí, že obrázky mají přesně výšku viewportu (obrazovky) */
-    object-fit: contain; /* Zachová celý obrázek a přizpůsobí jej oknu bez ořezu */
+    height: auto; /* Výška se přizpůsobí šířce obrázku */
+    object-fit: contain; /* Zachová celý obrázek bez oříznutí */
     overflow: hidden;
 }
 
@@ -65,8 +65,8 @@ h1 {
 @media screen and (max-width: 768px) {
     .mySlides img {
         width: 100vw; /* Šířka obrázku bude vždy velikost obrazovky (viewport width) */
-        height: 100vh; /* Výška obrázku bude vždy velikost obrazovky (viewport height) */
-        object-fit: cover; /* Přizpůsobí obrázek celé šířce a výšce, ořízne přebytek */
+        height: auto; /* Obrázky budou viditelné celé bez oříznutí */
+        object-fit: contain; /* Zajistí, že obrázek bude přizpůsoben bez oříznutí */
     }
 
     header h1 {
