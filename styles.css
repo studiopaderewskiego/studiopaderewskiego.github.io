@@ -1,4 +1,4 @@
-/* Základní styl stránky */
+/* Základní styl pro stránku */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
@@ -8,26 +8,26 @@ body {
 
 /* Styl pro hlavičku stránky */
 header {
-    text-align: center; /* Zarovnání nadpisu na střed */
+    text-align: center;
     padding: 20px;
-    position: relative; /* Zajištění pevného umístění nadpisu */
+    position: relative;
     z-index: 10;
-    margin-bottom: 30px; /* Přidání mezery pod nadpisem */
+    margin-bottom: 30px;
 }
 
 h1 {
-    font-size: 3em; /* Velikost písma nadpisu na větších obrazovkách */
-    color: #1ee519; /* Zelená barva */
+    font-size: 3em;
+    color: #1ee519;
     text-transform: uppercase;
     margin: 0;
-    word-wrap: break-word; /* Zajištění zalomení dlouhých slov na menších displejích */
+    word-wrap: break-word;
 }
 
 /* Styl pro slideshow */
 .slideshow-container {
     position: relative;
     width: 100%;
-    height: calc(100vh - 100px); /* Výška obrazovky kromě místa pro nadpis */
+    height: calc(100vh - 100px);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,12 +41,12 @@ h1 {
 }
 
 .mySlides img {
-    width: 100vw; /* Obrázky mají šířku 100 % viewportu (obrazovky) */
-    height: auto; /* Výška se přizpůsobí šířce obrázku */
-    object-fit: contain; /* Obrázek se přizpůsobí bez oříznutí */
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
 }
 
-/* Přechod efekt pro obrázky */
+/* Přechod pro obrázky */
 .fade {
     animation-name: fade;
     animation-duration: 2s;
@@ -57,16 +57,30 @@ h1 {
     to {opacity: 1}
 }
 
+/* Styl pro footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #000;
+}
+
+footer p {
+    font-size: 0.8em; /* Malý text */
+    color: #1ee519; /* Zelená barva */
+    margin: 0;
+}
+
 /* Media query pro mobilní zařízení */
 @media screen and (max-width: 768px) {
     header h1 {
-        font-size: 1.5em; /* Zmenšení nadpisu pro menší obrazovky */
-        padding: 10px; /* Přidání vnitřního odsazení, aby se text nepřekrýval */
-        margin: 0;
-        word-wrap: break-word; /* Zalomení textu, pokud je moc dlouhý */
+        font-size: 1.5em;
+        padding: 10px;
     }
 
     .slideshow-container {
-        height: calc(100vh - 80px); /* Úprava výšky na mobilu, aby nadpis nezakrýval obrázek */
+        height: calc(100vh - 80px);
     }
 }
