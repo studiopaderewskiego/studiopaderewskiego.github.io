@@ -6,8 +6,7 @@ body {
     color: white;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 100vh;
+    min-height: 100vh; /* zajistí, že stránka bude mít minimální výšku 100% okna */
 }
 
 /* Styl pro hlavičku stránky */
@@ -31,7 +30,6 @@ h1 {
 .slideshow-container {
     position: relative;
     width: 100%;
-    height: calc(100vh - 100px); /* Upravte výšku podle potřeby */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -42,11 +40,11 @@ h1 {
 .mySlides {
     display: none;
     width: 100%;
-    height: 100%;
+    height: auto; /* Opraveno pro lepší přizpůsobení obrázku */
 }
 
 .mySlides img {
-    width: 100vw;
+    width: 100%;
     height: auto;
     object-fit: contain;
 }
@@ -67,7 +65,7 @@ footer {
     text-align: center;
     padding: 20px 0;
     background-color: #000;
-    margin-top: 20px; /* Mezera nad copyrightem */
+    margin-top: auto; /* Přidáme margin-top: auto, aby copyright byl vždy na konci */
 }
 
 footer p {
@@ -84,6 +82,6 @@ footer p {
     }
 
     .slideshow-container {
-        height: calc(100vh - 80px);
+        height: auto; /* Upravili jsme, aby galerie měla variabilní výšku */
     }
 }
