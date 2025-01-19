@@ -1,0 +1,61 @@
+/* Základní styl stránky */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: white;
+    overflow: hidden; /* Zakázání posouvání stránky */
+}
+
+/* Styl pro hlavičku stránky */
+header {
+    text-align: center;
+    padding: 20px;
+    position: absolute; /* Umístění nad slideshow */
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+h1 {
+    font-size: 3em;
+    color: #1ee519; /* Zelená barva */
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* Styl pro slideshow */
+.slideshow-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Styl pro jednotlivé obrázky */
+.mySlides {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.mySlides img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover; /* Přizpůsobí obrázek tak, aby zabíral celé okno */
+}
+
+/* Přechod efekt pro obrázky */
+.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {opacity: 0.4}
+    to {opacity: 1}
+}
