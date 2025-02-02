@@ -1,9 +1,9 @@
 /* Základní styl pro stránku */
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #000;
-    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f4f6;
+    color: black;
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* zajistí, že stránka bude mít minimální výšku 100% okna */
@@ -12,18 +12,17 @@ body {
 /* Styl pro hlavičku stránky */
 header {
     text-align: center;
-    padding: 20px;
+    background-color: #63f450; /* Světle zelená barva */
+    border-radius: 0 0 100px 100px; /* Zaoblení pouze horních rohů */
+    padding: 0px;
     position: relative;
     z-index: 10;
     margin-bottom: 30px;
 }
 
-h1 {
-    font-size: 3em;
-    color: #b3b3b3;
-    text-transform: uppercase;
-    margin: 0;
-    word-wrap: break-word;
+header h1 {
+    font-size: 2em;
+    color: #000;
 }
 
 /* Styl pro slideshow */
@@ -55,6 +54,71 @@ h1 {
     animation-duration: 2s;
 }
 
+/* Styl pro úvodní odstavec */
+.intro {
+    text-align: center;
+    padding: 40px;
+    background-color: transparent; /* Žádná výplň */
+    margin-bottom: 40px;
+    border-radius: 10px;
+}
+
+.intro h1 {
+    font-size: 4em;
+    color: solid black;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    font-size: 1.2em;
+    color: solid black;
+    line-height: 1.6;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Kontejner pro sloupce */
+.container {
+    display: flex;
+    justify-content: space-between; /* Sloupce vedle sebe */
+    gap: 20px; /* Mezery mezi sloupci */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Styl pro jednotlivé sloupce */
+.column {
+    width: 48%; /* Každý sloupec bude mít 48% šířky */
+    border: 2px solid black; /* Bílý rámeček */
+    border-radius: 0px; /* Zaoblené rohy */
+    padding: 30px; /* Vnitřní odsazení uvnitř sloupce */
+    background-color: transparent; /* Žádná výplň */
+    min-width: 0; /* Zajištění, že sloupce nebudou přetékat */
+    position: relative; /* Potřebné pro pseudo-elementy */
+    border-right: 15px solid black; /* Zvýšení pravé hrany */
+    border-bottom: 15px solid black; /* Zvýšení spodní hrany */
+}
+
+/* Styl pro nadpisy v sloupcích */
+.column h2 {
+    font-size: 2em;
+    color: black; /* Bílé nadpisy */
+    margin-bottom: 15px;
+}
+
+/* Styl pro text v sloupcích */
+.column p {
+    font-size: 1.2em;
+    color: black; /* Bílý text */
+}
+
 /* Styl pro footer */
 footer {
     text-align: center;
@@ -79,4 +143,20 @@ footer p {
     .slideshow-container {
         height: auto; /* Upravili jsme, aby galerie měla variabilní výšku */
     }
+
+    .column {
+        width: 100%; /* Sloupce budou mít 100% šířky na mobilních zařízeních */
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+        padding: 10px;
+    }
+
+    .two-column-box {
+        flex-direction: column; /* Na mobilních zařízeních se sloupce umístí pod sebe */
+    }
+
+    
 }
