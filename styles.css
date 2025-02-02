@@ -25,12 +25,6 @@ header h1 {
     color: #000;
 }
 
-/* Přechod pro obrázky */
-.fade {
-    animation-name: fade;
-    animation-duration: 2s;
-}
-
 /* Styl pro úvodní odstavec */
 .intro {
     text-align: center;
@@ -115,10 +109,6 @@ footer p {
     header h1 {
         font-size: 1.5em;
         padding: 10px;
-    }
-
-    .slideshow-container {
-        height: auto; /* Upravili jsme, aby galerie měla variabilní výšku */
     }
 
     .column {
