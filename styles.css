@@ -25,21 +25,6 @@ header h1 {
     color: #000;
 }
 
-/* Slideshow kontejner */
-.slideshow-container {
-  width: 80%;  /* Nastavení šířky galerie */
-  position: relative;
-  margin: 0 auto;  /* Horizontální centrování galerie */
-  overflow: hidden;  /* Skrytí přesahující části obrázků */
-}
-
-/* Styly pro jednotlivé snímky */
-.slide img {
-  width: 100%;  /* Obrázky budou mít 100% šířku kontejneru */
-  height: auto;  /* Zachování poměru stran obrázků */
-  object-fit: contain;  /* Obrázky se přizpůsobí velikosti kontejneru, aniž by přesahovaly */
-}
-
 /* Přechod pro obrázky */
 .fade {
     animation-name: fade;
