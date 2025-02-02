@@ -25,20 +25,29 @@ header h1 {
     color: #000;
 }
 
-/* Nastavení kontejneru pro slideshow */
+/* Kontejner pro vertikální zarovnání galerie */
+.gallery-container {
+  display: flex;
+  justify-content: center;  /* Horizontální centrování galerie */
+  align-items: center;  /* Vertikální centrování galerie */
+  height: 100vh;  /* 100% výšky okna pro vertikální zarovnání */
+}
+
+/* Slideshow kontejner */
 .slideshow-container {
-  width: 80%; /* Zmenší šířku slideshow na 80% šířky stránky */
-  max-width: 1000px; /* Maximální šířka galerie, aby se nepřetáhla */
-  margin: 0 auto; /* Vycentrování slideshow horizontálně */
-  overflow: hidden; /* Skryje obrázky mimo viditelnou oblast */
+  width: 80%;  /* Nastavení šířky galerie */
+  max-width: 1000px;  /* Maximální šířka galerie */
+  margin: 0 auto;  /* Horizontální centrování */
+  overflow: hidden;  /* Skrytí obrázků mimo viditelnou oblast */
   position: relative;
 }
 
-/* Hlavní kontejner, který vycentruje galerii vertikálně na střed */
-.gallery-container {
-  display: flex;
-  align-items: center; /* Vycentrování slideshow vertikálně */
-  height: 100vh; /* Výška 100% okna pro vertikální zarovnání */
+/* Styly pro jednotlivé snímky */
+.slide img {
+  width: 100%;  /* Šířka obrázků přizpůsobená kontejneru */
+  height: auto;  /* Udržení proporcí obrázků */
+  display: block;
+  object-fit: contain;  /* Obrázek se vejde celý do kontejneru, zachovává proporce */
 }
 
 /* Přechod pro obrázky */
