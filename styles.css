@@ -38,12 +38,12 @@ header h1 {
 /* Styl pro jednotlivé obrázky */
 .mySlides {
     display: none;
-    width: 60%;
+    width: 100%;
     height: auto; /* Opraveno pro lepší přizpůsobení obrázku */
 }
 
 .mySlides img {
-    width: 60%;
+    width: 100%;
     height: auto;
     object-fit: contain;
 }
