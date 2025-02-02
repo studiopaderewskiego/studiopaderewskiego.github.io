@@ -25,27 +25,18 @@ header h1 {
     color: #000;
 }
 
-/* Styl pro slideshow */
+/* Nastavení kontejneru pro slideshow */
 .slideshow-container {
-    position: relative;
-    width: 60%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 20px; /* Mezera pod galerií */
+  width: 80%; /* Zmenší šířku slideshow na 80% šířky stránky */
+  margin: 0 auto; /* Vycentruje slideshow na stránce */
+  overflow: hidden; /* Skryje obrázky, které jsou mimo viditelnou oblast */
+  position: relative;
 }
 
-/* Styl pro jednotlivé obrázky */
-.mySlides {
-    display: none;
-    width: 100%;
-    height: auto; /* Opraveno pro lepší přizpůsobení obrázku */
-}
-
-.mySlides img {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+/* Styly pro jednotlivé snímky */
+.slide img {
+  width: 100%; /* Zajištění, že obrázek bude mít 100% šířku svého kontejneru */
+  height: auto; /* Udržení proporcí obrázku */
 }
 
 /* Přechod pro obrázky */
