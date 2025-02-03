@@ -65,7 +65,7 @@ header h1 {
 }
 
 /* Styl pro jednotlivé sloupce */
-.column {
+.text-box {
     width: 48%; /* Každý sloupec bude mít 48% šířky */
     border: 2px solid black; /* Bílý rámeček */
     border-radius: 0px; /* Zaoblené rohy */
@@ -88,6 +88,25 @@ header h1 {
 .column p {
     font-size: 1.2em;
     color: black; /* Bílý text */
+}
+
+/* Obrázky a znaménka + pod rámečkem */
+.image-section {
+  display: flex;
+  flex-direction: column; /* Obrázky pod sebou */
+  align-items: center; /* Centrované obrázky */
+}
+
+.image-section img {
+  max-width: 100%; /* Obrázky budou v plné šířce svého kontejneru */
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.plus-sign {
+  font-size: 2em; /* Velikost znaku + */
+  margin: 10px 0; /* Mezera kolem znaku + */
+  color: black; /* Barva znaku + */
 }
 
 /* Styl pro footer */
