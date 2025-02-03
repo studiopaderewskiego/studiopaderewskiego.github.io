@@ -75,8 +75,8 @@ header h1 {
   width: 100%;
   border: 2px solid black;
   padding: 20px;
-  border-right: 6px solid black; /* Tlustší pravá hrana */
-  border-bottom: 6px solid black; /* Tlustší dolní hrana */
+  border-right: 10px solid black; /* Tlustší pravá hrana */
+  border-bottom: 10px solid black; /* Tlustší dolní hrana */
   padding: 20px;
   margin-bottom: 20px;
   border-radius: 0; /* Ostré rohy */
