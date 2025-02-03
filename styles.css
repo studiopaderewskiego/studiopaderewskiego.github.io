@@ -58,6 +58,7 @@ header h1 {
   display: flex; /* Flexbox pro umístění sloupců vedle sebe */
   justify-content: space-between; /* Mezera mezi sloupci */
   width: 80%; /* Nastavení šířky kontejneru */
+  gap: 20px; /* Přidá mezeru mezi sloupci */
   margin: 0 auto; /* Centrovaní kontejneru */
 }
 
