@@ -131,6 +131,15 @@ footer p {
     .two-column-box {
         flex-direction: column; /* Na mobilních zařízeních se sloupce umístí pod sebe */
     }
+    .container {
+    flex-direction: column; /* Sloupce se zobrazí pod sebou */
+  }
 
-    
+  .left-column, .right-column {
+    width: 100%; /* Sloupce zabírají 100% šířky na mobilních zařízeních */
+  }
+
+  .image-section img {
+    width: 90%; /* Obrázky budou zmenšené a centrované */
+  }
 }
