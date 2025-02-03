@@ -53,41 +53,29 @@ header h1 {
     box-sizing: border-box;
 }
 
-/* Kontejner pro sloupce */
+/* Kontejner pro oba sloupce */
 .container {
-    display: flex;
-    justify-content: space-between; /* Sloupce vedle sebe */
-    gap: 20px; /* Mezery mezi sloupci */
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  display: flex; /* Flexbox pro umístění sloupců vedle sebe */
+  justify-content: space-between; /* Mezera mezi sloupci */
+  width: 80%; /* Nastavení šířky kontejneru */
+  margin: 0 auto; /* Centrovaní kontejneru */
 }
 
-/* Styl pro jednotlivé sloupce */
+/* Levý a pravý sloupec */
+.left-column, .right-column {
+  width: 48%; /* Každý sloupec zabírá 48% šířky stránky */
+  display: flex;
+  flex-direction: column; /* Vertikální uspořádání obsahu */
+  align-items: center; /* Centrovaní obsahu v rámci sloupce */
+}
+
+/* Rámeček kolem textu v obou sloupcích */
 .text-box {
-    width: 48%; /* Každý sloupec bude mít 48% šířky */
-    border: 2px solid black; /* Bílý rámeček */
-    border-radius: 0px; /* Zaoblené rohy */
-    padding: 30px; /* Vnitřní odsazení uvnitř sloupce */
-    background-color: transparent; /* Žádná výplň */
-    min-width: 0; /* Zajištění, že sloupce nebudou přetékat */
-    position: relative; /* Potřebné pro pseudo-elementy */
-    border-right: 15px solid black; /* Zvýšení pravé hrany */
-    border-bottom: 15px solid black; /* Zvýšení spodní hrany */
-}
-
-/* Styl pro nadpisy v sloupcích */
-.column h2 {
-    font-size: 2em;
-    color: black; /* Bílé nadpisy */
-    margin-bottom: 15px;
-}
-
-/* Styl pro text v sloupcích */
-.column p {
-    font-size: 1.2em;
-    color: black; /* Bílý text */
+  width: 100%;
+  border: 2px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px; /* Mezera pod rámečkem */
 }
 
 /* Obrázky a znaménka + pod rámečkem */
