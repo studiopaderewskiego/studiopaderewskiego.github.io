@@ -102,20 +102,6 @@ header h1 {
   color: black; /* Barva znaku + */
 }
 
-/* Styl pro footer */
-footer {
-    text-align: center;
-    padding: 20px 0;
-    background-color: #000;
-    margin-top: auto; /* Přidáme margin-top: auto, aby copyright byl vždy na konci */
-}
-
-footer p {
-    font-size: 0.8em; /* Malý text */
-    color: #b3b3b3; /* Zelená barva */
-    margin: 0;
-}
-
 /* Media query pro mobilní zařízení */
 @media screen and (max-width: 768px) {
     header h1 {
