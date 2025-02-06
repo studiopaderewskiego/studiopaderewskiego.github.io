@@ -88,6 +88,7 @@ header h1 {
   background-color: #b9b9b9; /* Světle šedá barva pozadí */
   padding: 20px; /* Přidání vnitřní mezery okolo obrázků */
   border-radius: 10px; /* Zaoblení rohů pozadí sekce obrázků */
+  margin: 0; /* Odstranění mezery mezi rámečkem a obrázky */
 }
 
 .image-section img {
