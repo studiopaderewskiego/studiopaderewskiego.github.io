@@ -12,7 +12,7 @@ body {
 /* Styl pro hlavičku stránky */
 header {
     text-align: center;
-    background-color: #63f450; /* Světle zelená barva */
+    background-color: red; /* Světle zelená barva */
     border-radius: 0 0 100px 100px; /* Zaoblení pouze horních rohů */
     padding: 0px;
     position: relative;
