@@ -124,10 +124,12 @@ header h1 {
     }
     .container {
     flex-direction: column; /* Sloupce se zobrazí pod sebou */
+     width: 95%; /* Zajistí, že sloupce budou blíže k okraji displeje */
   }
 
   .left-column, .right-column {
     width: 100%; /* Sloupce zabírají 100% šířky na mobilních zařízeních */
+    padding: 0 10px; /* Zmenšení vnitřní mezery v rámci sloupců */
   }
 
   .image-section img {
