@@ -89,6 +89,8 @@ header h1 {
   flex-direction: column; /* Obrázky pod sebou */
   align-items: center; /* Centrované obrázky */
   background-color: #f0f0f0; /* Světle šedá barva pozadí */
+  padding: 20px; /* Přidání vnitřní mezery okolo obrázků */
+  border-radius: 10px; /* Zaoblení rohů pozadí sekce obrázků */
 }
 
 .image-section img {
