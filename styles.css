@@ -76,11 +76,8 @@ header h1 {
   width: 100%;
   border: 2px solid black;
   padding: 20px;
-  border-right: 10px solid black; /* Tlustší pravá hrana */
-  border-bottom: 10px solid black; /* Tlustší dolní hrana */
-  padding: 20px;
   margin-bottom: 20px;
-  border-radius: 0 0 100px 100px; /* Zaoblení pouze horních rohů */
+  border-radius: 20 20 0px 0px; /* Zaoblení pouze horních rohů */
 }
 
 /* Obrázky a znaménka + pod rámečkem */
