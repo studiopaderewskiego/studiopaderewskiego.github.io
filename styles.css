@@ -80,7 +80,7 @@ header h1 {
   border-bottom: 10px solid black; /* Tlustší dolní hrana */
   padding: 20px;
   margin-bottom: 20px;
-  border-radius: 20; /* Ostré rohy */
+  border-radius: 0 0 100px 100px; /* Zaoblení pouze horních rohů */
 }
 
 /* Obrázky a znaménka + pod rámečkem */
