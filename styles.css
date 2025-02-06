@@ -131,6 +131,6 @@ header h1 {
   }
 
   .image-section img {
-    width: 90%; /* Obrázky budou zmenšené a centrované */
+    width: 100%; /* Obrázky budou zmenšené a centrované */
   }
 }
