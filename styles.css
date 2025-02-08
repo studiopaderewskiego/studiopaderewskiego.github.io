@@ -2,8 +2,8 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f0f4f6;
-    color: black;
+    background-color: #FFFFFF;
+    color: #161616;
     display: flex;
     flex-direction: column;
     min-height: 100vh; /* zajistí, že stránka bude mít minimální výšku 100% okna */
@@ -12,8 +12,7 @@ body {
 /* Styl pro hlavičku stránky */
 header {
     text-align: center;
-    background-color: red; /* Světle zelená barva */
-    border-radius: 0 0 100px 100px; /* Zaoblení pouze horních rohů */
+    background-color: #F4FF00; /* Světle zelená barva */
     padding: 0px;
     position: relative;
     z-index: 10;
@@ -21,8 +20,8 @@ header {
 }
 
 header h1 {
-    font-size: 2em;
-    color: #000;
+    font-size: 1em;
+    color: #161616;
 }
 
 /* Styl pro úvodní odstavec */
@@ -36,13 +35,13 @@ header h1 {
 
 .intro h1 {
     font-size: 4em;
-    color: solid black;
+    color: #161616;
     margin-bottom: 20px;
 }
 
 .intro p {
     font-size: 1.2em;
-    color: solid black;
+    color: #161616;
     line-height: 1.6;
     max-width: 900px;
     margin: 0 auto;
@@ -72,12 +71,43 @@ header h1 {
 }
 
 /* Rámeček kolem textu v obou sloupcích */
-.text-box {
+.text-box.top-box{
   width: 100%;
-  border: 2px solid black;
   padding: 20px;
   margin-bottom: 0px;
   border-radius: 20px 20px 0 0; /* Zaoblení pouze horních rohů */
+  position: relative;
+  overflow: hidden; /* Skrytí všeho co přesahuje rámeček */
+  border: 2px solid #161616; /* rámeček */
+}
+
+/* Rámeček kolem textu v obou sloupcích */
+.text-box.bottom-box{
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 0px;
+    border-radius: 0 0 20px 20px; /* Zaoblení pouze horních rohů */
+    position: relative;
+    overflow: hidden; /* Skrytí všeho co přesahuje rámeček */
+    border: 2px solid #161616; /* rámeček */
+  }
+
+/* Styl pro tlačítko "To chci!" */
+.btn-chci {
+    background-color: #ff5500; /* Oranžová barva pozadí */
+    color: #161616; /* Bílé písmo */
+    padding: 10px 20px; /* Vnitřní okraje tlačítka */
+    font-size: 1em; /* Velikost písma */
+    font-weight: bold; /* Tlusté písmo jako h1 */
+    border: none; /* Žádný rámeček kolem tlačítka */
+    border-radius: 25px; /* Zaoblení rohů tlačítka */
+    cursor: pointer; /* Ukazatel myši při najetí na tlačítko */
+    transition: background-color 0.3s; /* Plynulý přechod pro změnu barvy pozadí */
+}
+
+/* Změna barvy pozadí při najetí myší */
+.btn-chci:hover {
+    background-color: #F4FF00; /* Ztmavená oranžová při hover efektu */
 }
 
 /* Obrázky a znaménka + pod rámečkem */
@@ -85,10 +115,14 @@ header h1 {
   display: flex;
   flex-direction: column; /* Obrázky pod sebou */
   align-items: center; /* Centrované obrázky */
-  background-color: #b9b9b9; /* Světle šedá barva pozadí */
   padding: 20px; /* Přidání vnitřní mezery okolo obrázků */
-  border-radius: 0 0 20px 20px; /* Zaoblení rohů pozadí sekce obrázků */
+  border-radius: 0px;
   margin: 0px; /* Odstranění mezery mezi rámečkem a obrázky */
+  position: relative;
+  overflow: hidden; /* Skrytí všeho co přesahuje rámeček */
+  border: 2px solid #161616; /* rámeček */
+  border-top: none;
+  border-bottom: none;
 }
 
 .image-section img {
@@ -99,8 +133,15 @@ header h1 {
 
 .plus-sign {
   font-size: 2em; /* Velikost znaku + */
+  width: 50px; /* Šířka tlačítka */
+  height: 50px; /* Výška tlačítka */
+  display: flex; /* Flexbox pro centrování obsahu */
+  justify-content: center; /* Horizontální centrování */
+  align-items: center; /* Vertikální centrování */
+  border-radius: 50%; /* Zaoblení do tvaru kruhu */
+  background-color: #f3f4f4;
   margin: 10px 0; /* Mezera kolem znaku + */
-  color: black; /* Barva znaku + */
+  color: #161616; /* Barva znaku + */
 }
 
 /* Media query pro mobilní zařízení */
