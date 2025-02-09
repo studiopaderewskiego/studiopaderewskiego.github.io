@@ -33,18 +33,20 @@ header h1 {
     align-items: center; /* Vertikální centrování obrázku (pokud je obrázek větší) */
   }
   
-  .image {
+.image {
     max-width: 100%; /* Obrázek zabere maximálně 100% šířky svého kontejneru */
     height: auto; /* Zachování poměru stran obrázku */
 }  
 
 /* Styl pro úvodní odstavec */
 .intro {
+    width: 50%;
     text-align: center;
-    padding: 40px;
+    padding: 20px;
     background-color: transparent; /* Žádná výplň */
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     border-radius: 10px;
+    margin: 0 auto;
 }
 
 .intro h1 {
@@ -57,7 +59,6 @@ header h1 {
     font-size: 1.2em;
     color: #161616;
     line-height: 1.6;
-    width: 60%;
     margin: 0 auto;
 }
 
@@ -162,7 +163,7 @@ header h1 {
 .new-section {
     background-color: #d0d3d4; /* Světle šedé pozadí, můžeš upravit barvu */
     padding: 40px;
-    width: 60%; /* Nastavení šířky sekce */
+    width: 50%; /* Nastavení šířky sekce */
     text-align: center;
     width: 100%;
     margin-top: 80px;
@@ -203,10 +204,11 @@ header h1 {
   }
   
   .product img {
-    max-width: 100%; /* Obrázky budou v plné šířce svého kontejneru */
+    max-width: 40%; /* Obrázky budou v plné šířce svého kontejneru */
     border-radius: 20px;
     height: auto;
     margin-bottom: 10px;
+    margin: 0 auto;
   }
   
   /* Styl pro nadpis, popis a cenu produktu */
