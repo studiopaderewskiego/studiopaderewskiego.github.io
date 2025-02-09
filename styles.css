@@ -348,4 +348,13 @@ footer {
   .image-section img {
     width: 100%; /* Obrázky budou zmenšené a centrované */
   }
+
+/* Nastavení galerie */
+.product-gallery {
+    width: 100%; /* Nastavení šířky kontejneru */
+  }
+  
+.product img {
+    max-width: 95%; /* Obrázky budou v plné šířce svého kontejneru */
+  }
 }
