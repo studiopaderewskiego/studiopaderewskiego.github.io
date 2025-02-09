@@ -319,13 +319,13 @@ footer {
 }
 
 .intro h1 {
-    font-size: 1em;
+    font-size: 2em;
     color: #161616;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .intro p {
-    font-size: 0.5em;
+    font-size: 2em;
     color: #161616;
     line-height: 1.6;
     margin: 0 auto;
@@ -341,7 +341,7 @@ footer {
 
   .left-column, .right-column {
     width: 100%; /* Sloupce zabírají 100% šířky na mobilních zařízeních */
-    padding: 0 10px; /* Zmenšení vnitřní mezery v rámci sloupců */
+    padding: 0 20px; /* Zmenšení vnitřní mezery v rámci sloupců */
     margin: 0 auto;
   }
 
