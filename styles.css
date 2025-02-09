@@ -301,19 +301,14 @@ footer {
 /* Media query pro mobilní zařízení */
 @media screen and (max-width: 768px) {
     header h1 {
-        font-size: 1em;
+        font-size: 10px;
         font-weight: bold;
-        padding: 10px;
+        padding: 5px;
     }
 
     .column {
         width: 100%; /* Sloupce budou mít 100% šířky na mobilních zařízeních */
-        margin: 10px 0;
-    }
-
-    header h1 {
-        font-size: 1.5em;
-        padding: 10px;
+        margin: 0 auto;
     }
 
     .two-column-box {
@@ -327,6 +322,7 @@ footer {
   .left-column, .right-column {
     width: 100%; /* Sloupce zabírají 100% šířky na mobilních zařízeních */
     padding: 0 10px; /* Zmenšení vnitřní mezery v rámci sloupců */
+    margin: 0 auto;
   }
 
   .image-section img {
