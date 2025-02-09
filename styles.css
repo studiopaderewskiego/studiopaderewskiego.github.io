@@ -310,6 +310,13 @@ footer {
         width: 100%; /* Sloupce budou mít 100% šířky na mobilních zařízeních */
         margin: 0 auto;
     }
+/* Styl pro úvodní odstavec */
+.intro {
+    width: 95%;
+    text-align: center;
+    padding: 20px;
+    margin: 0 auto;
+}
 
 .intro h1 {
     font-size: 1em;
