@@ -18,16 +18,13 @@ header {
     z-index: 10;
     margin-bottom: 30px;
     display: inline-block;
-    white-space: normal; /* Pozwala na łamanie tekstu */
-    word-wrap: break-word; /* Zapobiega wychodzeniu tekstu poza ekran */
-}
-
-.header span {
-  white-space: nowrap; /* Zapobiega łamaniu tekstu między słowem a znakiem */
+    white-space: normal; /* Povolit zalamování textu */
+    word-wrap: break-word; /* Zabraní přetékání textu mimo obrazovku */
+    text-align: center; /* Vycentrování textu */
 }
 
 .header span:last-child {
-  display: none; /* Skryje poslední znak (např. ✦), když je na konci řádku */
+    display: none; /* Skryje poslední znak (např. ✦), když je na konci řádku */
 }
 
 header h1 {
