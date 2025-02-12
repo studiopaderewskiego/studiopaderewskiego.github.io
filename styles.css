@@ -24,16 +24,8 @@ header {
 }
 
 header h1 {
-  display: inline-block;
-  white-space: normal; /* Povolit zalamování textu */
-  word-wrap: break-word; /* Zabraní přetékání textu mimo obrazovku */
-  text-align: center; /* Vycentrování textu */
     font-size: 1em;
     color: #161616;
-}
-
-header h1 .separator:last-of-type {
-  display: none; /* Skryje poslední separátor (✦) */
 }
 
 /* Obrázek mezi záhlavím a první sekcí */
