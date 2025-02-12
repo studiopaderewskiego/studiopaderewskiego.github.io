@@ -23,8 +23,8 @@ header {
     text-align: center; /* Vycentrování textu */
 }
 
-.header span:last-child {
-    display: none; /* Skryje poslední znak (např. ✦), když je na konci řádku */
+.header .separator:last-child {
+    display: none; /* Skryje poslední symbol, pokud je na konci řádku */
 }
 
 header h1 {
