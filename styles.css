@@ -26,6 +26,17 @@ header {
 header h1 {
     font-size: 1em;
     color: #161616;
+    animation: moveText 10s linear infinite; /* Spustí animaci, kde se text neustále pohybuje */
+}
+
+/* Animace pro plynulý pohyb textu zleva doprava */
+@keyframes moveText {
+  0% {
+    transform: translateX(-100%); /* Začínáme úplně vlevo */
+  }
+  100% {
+    transform: translateX(100%); /* Konec animace úplně vpravo */
+  }
 }
 
 /* Obrázek mezi záhlavím a první sekcí */
