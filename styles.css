@@ -72,10 +72,31 @@ header {
     height: auto;     /* Udržuje poměr stran */
 }
 
-/* Styl pro obrázek ve druhém sloupci */
+/* Skrýváme všechny obrázky, kromě toho, který je aktivní */
 .project-image {
+    display: none;
     max-width: 100%;
     height: auto;
+}
+
+/* Zobrazíme pouze obrázek s třídou "active" */
+.project-image.active {
+    display: block;
+}
+
+/* Kontejner tlačítek */
+.button-container {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+/* Základní styl tlačítek */
+button {
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    cursor: pointer;
 }
 
 /* Popis projektu ve třetím sloupci */
@@ -108,21 +129,11 @@ footer {
 
     .column {
         width: 100%; /* Sloupce budou mít 100% šířky na mobilních zařízeních */
-        margin: 0px auto;
+        margin: 10px 0;
     }
 
     header h1 {
         font-size: 1.5em;
         padding: 10px;
-    }
-    
-    .project-section {
-        flex-direction: column; /* Změní uspořádání sloupců na vertikální */
-        align-items: center; /* Umožní centrování sloupců */
-    }
-
-    /* Upravíme šířky jednotlivých sloupců na 100% */
-    .project-title, .project-gallery, .project-description {
-        width: 100%; /* Sloupce budou mít 100% šířky */
     }
 }
