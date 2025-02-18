@@ -74,6 +74,13 @@ header {
     justify-content: center;
 }
 
+.project-gallery img {
+    max-width: 100%;  /* Obrázek se přizpůsobí šířce kontejneru */
+    height: auto;     /* Udržuje poměr stran */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
 /* Styl pro obrázek ve druhém sloupci */
 .project-image {
     max-width: 100%;
