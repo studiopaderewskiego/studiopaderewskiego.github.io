@@ -48,53 +48,39 @@ header {
 .project-section {
     display: grid;
     grid-template-columns: 0.5fr 2fr 1fr; /* Levý sloupec je užší (0.5fr), prostřední širší (2fr), pravý stejný (1fr) */
-    gap: 20px;
-    padding: 20px;
     align-items: start;
 }
 
 /* Název projektu v prvním sloupci */
 .project-title {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 8px;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
 }
 
 /* Galerie v druhém sloupci - obsahuje jeden obrázek */
 .project-gallery {
-    background-color: #fafafa;
-    padding: 20px;
-    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
 }
 
 .project-gallery img {
     max-width: 100%;  /* Obrázek se přizpůsobí šířce kontejneru */
     height: auto;     /* Udržuje poměr stran */
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Styl pro obrázek ve druhém sloupci */
 .project-image {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Popis projektu ve třetím sloupci */
 .project-description {
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 8px;
-    text-align: justify;
+    text-align: left;
 }
 
 footer {
