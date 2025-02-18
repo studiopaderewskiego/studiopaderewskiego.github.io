@@ -108,11 +108,21 @@ footer {
 
     .column {
         width: 100%; /* Sloupce budou mít 100% šířky na mobilních zařízeních */
-        margin: 10px 0;
+        margin: 0px auto;
     }
 
     header h1 {
         font-size: 1.5em;
         padding: 10px;
+    }
+    
+    .project-section {
+        flex-direction: column; /* Změní uspořádání sloupců na vertikální */
+        align-items: center; /* Umožní centrování sloupců */
+    }
+
+    /* Upravíme šířky jednotlivých sloupců na 100% */
+    .project-title, .project-gallery, .project-description {
+        width: 100%; /* Sloupce budou mít 100% šířky */
     }
 }
