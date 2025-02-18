@@ -129,7 +129,7 @@ footer {
 
     .column {
         width: 100%; /* Sloupce budou mít 100% šířky na mobilních zařízeních */
-        margin: 10px 0;
+        margin: 0px auto;
     }
 
     header h1 {
