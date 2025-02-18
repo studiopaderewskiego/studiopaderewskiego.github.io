@@ -136,4 +136,13 @@ footer {
         font-size: 1.5em;
         padding: 10px;
     }
+    
+    .project-section {
+        display: block; /* Sloupce budou zobrazeny pod sebou */
+        padding: 10px;
+    }
+
+    .project-title, .project-gallery, .project-description {
+        margin-bottom: 20px; /* Vytvoření mezery mezi jednotlivými sekcemi */
+    }
 }
