@@ -145,6 +145,11 @@ footer {
 
 /* Media query pro mobilní zařízení */
 @media screen and (max-width: 768px) {
+    /* Samotný text - dvě identické části pro nekonečné posouvání */
+.scrolling-text span {
+    font-size: 1em;
+    }
+    
     .column {
         width: 100%; /* Sloupce budou mít 100% šířky na mobilních zařízeních */
         margin: 0px auto;
