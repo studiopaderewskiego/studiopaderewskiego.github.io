@@ -44,6 +44,24 @@ header {
     }
 }
 
+/* Sekce pro logo */
+.logo-section {
+    width: 100%; /* Logo pokryje 100% šířky stránky */
+    display: flex; /* Flexbox pro snadné zarovnání obsahu */
+    justify-content: center; /* Logo zarovnáno horizontálně na střed */
+}
+
+/* Styl pro logo */
+.logo {
+    width: 100%; /* Logo se přizpůsobí šířce sekce */
+    padding: 10px; /* Přidá prostor uvnitř obrázku */
+    margin: 10px; /* Přidá prostor kolem obrázku */
+    display: block; /* Zajistí, že obrázek nebude mít žádné mezery kolem */
+    max-width: 100%; /* Zabrání tomu, aby logo přesahovalo šířku stránky */
+    height: auto; /* Automaticky upraví výšku podle šířky */
+    object-fit: cover; /* Logo se roztáhne na celou šířku a případně ořízne, aby se přizpůsobilo sekci */
+}
+
 /* Sekce s projektem */
 .project-section {
     display: grid;
