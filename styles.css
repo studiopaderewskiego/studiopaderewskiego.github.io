@@ -77,7 +77,6 @@ header {
     justify-content: left;
     text-align: left;
     padding: 10px; /* Přidá prostor uvnitř obrázku */
-    margin: 10px; /* Přidá prostor kolem obrázku */
 }
 
 /* Galerie v druhém sloupci - obsahuje jeden obrázek */
@@ -86,8 +85,6 @@ header {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 10px; /* Přidá prostor uvnitř obrázku */
-    margin: 10px; /* Přidá prostor kolem obrázku */
 }
 
 .project-gallery img {
@@ -126,7 +123,6 @@ button {
 .project-description {
     text-align: left;
     padding: 10px; /* Přidá prostor uvnitř obrázku */
-    margin: 10px; /* Přidá prostor kolem obrázku */
 }
 
 footer {
