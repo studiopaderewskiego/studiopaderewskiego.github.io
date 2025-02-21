@@ -152,9 +152,15 @@ footer {
         margin: 0px auto;
     }
     
-    .project-section {
-        display: block; /* Sloupce budou zobrazeny pod sebou */
-        padding: 3px;
+    /* Název projektu v prvním sloupci */
+    .project-title {
+    padding: 3px; /* Přidá prostor uvnitř obrázku */
+    }
+
+    /* Popis projektu ve třetím sloupci */
+.project-description {
+    text-align: left;
+    padding: 3px; /* Přidá prostor uvnitř obrázku */
     }
 
     .logo {
