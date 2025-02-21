@@ -159,4 +159,9 @@ footer {
         display: block; /* Sloupce budou zobrazeny pod sebou */
         padding: 0px;
     }
+
+    .logo {
+    padding: 10px;
+    margin: 10px;
+  }
 }
