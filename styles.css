@@ -67,6 +67,7 @@ header {
     display: grid;
     grid-template-columns: 0.5fr 2fr 1fr; /* Levý sloupec je užší (0.5fr), prostřední širší (2fr), pravý stejný (1fr) */
     align-items: start;
+    max-width: 100%; /* Zabrání tomu, aby přesahovalo šířku stránky */
 }
 
 /* Název projektu v prvním sloupci */
