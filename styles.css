@@ -76,7 +76,6 @@ header {
     align-items: left;
     justify-content: left;
     text-align: left;
-    padding: 10px; /* Přidá prostor uvnitř obrázku */
 }
 
 /* Galerie v druhém sloupci - obsahuje jeden obrázek */
@@ -122,7 +121,6 @@ button {
 /* Popis projektu ve třetím sloupci */
 .project-description {
     text-align: left;
-    padding: 10px; /* Přidá prostor uvnitř obrázku */
 }
 
 footer {
@@ -150,17 +148,6 @@ footer {
     .column {
         width: 100%; /* Sloupce budou mít 100% šířky na mobilních zařízeních */
         margin: 0px auto;
-    }
-    
-    /* Název projektu v prvním sloupci */
-    .project-title {
-    padding: 3px; /* Přidá prostor uvnitř obrázku */
-    }
-
-    /* Popis projektu ve třetím sloupci */
-.project-description {
-    text-align: left;
-    padding: 3px; /* Přidá prostor uvnitř obrázku */
     }
 
     .logo {
