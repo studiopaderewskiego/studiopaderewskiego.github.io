@@ -140,7 +140,7 @@ footer {
 /* Media query pro mobilní zařízení */
 @media screen and (max-width: 768px) {
     header h1 {
-        font-size: 1em;
+        font-size: 0.75em;
         font-weight: bold;
         padding: 10px;
     }
@@ -148,11 +148,6 @@ footer {
     .column {
         width: 100%; /* Sloupce budou mít 100% šířky na mobilních zařízeních */
         margin: 0px auto;
-    }
-
-    header h1 {
-        font-size: 1.5em;
-        padding: 10px;
     }
     
     .project-section {
