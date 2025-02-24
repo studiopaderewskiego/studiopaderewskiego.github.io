@@ -123,6 +123,42 @@ button {
     text-align: left;
 }
 
+/* Nová sekce SHOP */
+.shop-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dva sloupce vedle sebe, každý má stejnou šířku */
+    padding: 0; /* Odstraní mezery kolem sekce */
+    height: 100vh; /* Celková výška sekce */
+    border-top: 1px solid #161616; /* Čára mezi sloupci */
+}
+
+/* Levý sloupec s nápisem SHOP */
+.shop-left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #161616; /* Čára mezi sloupci */
+    height: 100%; /* Zajistí, že levý sloupec bude mít výšku celé sekce */
+}
+
+.shop-left h2 {
+    font-size: 2em;
+}
+
+/* Pravý sloupec s plakátem a cenou */
+.shop-right {
+    display: flex;
+    height: auto; /* Výška sekce bude záviset na obrázku */
+    margin: 0; /* Zajistíme, že nebude žádná mezera kolem sekce */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.shop-image {
+    width: 100%;  /* Obrázek bude mít šířku 100% rodičovské sekce */
+    height: 100%; /* Obrázek bude mít výšku 100% rodičovské sekce */
+}
+
 footer {
     color: #161616; /* Bílý text */
     text-align: center; /* Centrování textu */
