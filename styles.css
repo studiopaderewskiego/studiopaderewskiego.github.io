@@ -171,6 +171,49 @@ button {
     vertical-align: bottom; /* Odstraní mezeru způsobenou inline elementem */
 }
 
+/* Sekce s projektem */
+.project-section {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr; /* Levý sloupec je užší (0.5fr), prostřední širší (2fr), pravý stejný (1fr) */
+    align-items: start;
+    max-width: 100%; /* Zabrání tomu, aby přesahovalo šířku stránky */
+}
+
+/* Název projektu v prvním sloupci */
+.new-gallery-title {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+}
+
+/* Název projektu v prvním sloupci */
+.new-gallery-section {
+    display: flex;
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+}
+
+/* Galerie v druhém sloupci - obsahuje jeden obrázek */
+.new-gallery {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.new-gallery-image {
+    display: none;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Zobrazíme pouze obrázek s třídou "active" */
+.new-gallery-image.active {
+    display: block;
+}
+
 footer {
     color: #161616; /* Bílý text */
     text-align: center; /* Centrování textu */
