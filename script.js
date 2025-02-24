@@ -28,7 +28,6 @@ nextBtn.addEventListener('click', () => {
 
 // Zobraz první obrázek na začátku
 showImage(currentIndex);
-});
 
 document.addEventListener('DOMContentLoaded', function () {
     let currentIndexNew = 0;
