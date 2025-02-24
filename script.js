@@ -28,33 +28,4 @@ nextBtn.addEventListener('click', () => {
 
 // Zobraz první obrázek na začátku
 showImage(currentIndex);
-
-document.addEventListener('DOMContentLoaded', function () {
-    let currentIndexNew = 0;
-    const imagesNew = document.querySelectorAll('.new-gallery-image');
-    const prevButtonNew = document.getElementById('prev-btn-new');
-    const nextButtonNew = document.getElementById('next-btn-new');
-
-    function showImageNew(index) {
-        // Skrytí všech obrázků
-        imagesNew.forEach(img => img.classList.remove('active'));
-        
-        // Zobrazení obrázku podle aktuálního indexu
-        imagesNew[index].classList.add('active');
-    }
-
-    // Funkce pro přechod na předchozí obrázek
-    prevButtonNew.addEventListener('click', function () {
-        currentIndexNew = (currentIndexNew === 0) ? imagesNew.length - 1 : currentIndexNew - 1;
-        showImageNew(currentIndexNew);
-    });
-
-    // Funkce pro přechod na další obrázek
-    nextButtonNew.addEventListener('click', function () {
-        currentIndexNew = (currentIndexNew === imagesNew.length - 1) ? 0 : currentIndexNew + 1;
-        showImageNew(currentIndexNew);
-    });
-
-    // Inicializace zobrazení prvního obrázku
-    showImageNew(currentIndexNew);
 });
