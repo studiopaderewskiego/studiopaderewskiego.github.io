@@ -190,4 +190,14 @@ footer {
     padding: 3px;
     margin: 3px;
   }
+
+     .shop-section {
+        grid-template-columns: 1fr; /* Sloupce budou pod sebou */
+        height: auto; /* Výška bude automatická, aby se přizpůsobila obsahu */
+    }
+
+    .shop-left, .shop-right {
+        border-right: none; /* Odstraníme čáru mezi sloupci, protože sloupce jsou nyní pod sebou */
+        height: auto; /* Výška bude automatická, aby se přizpůsobila obsahu */
+    }
 }
