@@ -127,9 +127,10 @@ button {
 .shop-section {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Dva sloupce vedle sebe, každý má stejnou šířku */
-    padding: 0; /* Odstraní mezery kolem sekce */
+    padding: 0;
     height: 100vh; /* Celková výška sekce */
-    border-top: 1px solid #161616; /* Čára mezi sloupci */
+    border-top: 1px solid #161616;
+    box-sizing: border-box;
 }
 
 /* Levý sloupec s nápisem SHOP */
@@ -138,7 +139,7 @@ button {
     justify-content: center;
     align-items: center;
     border-right: 1px solid #161616; /* Čára mezi sloupci */
-    height: 100%; /* Zajistí, že levý sloupec bude mít výšku celé sekce */
+    height: 100%;
 }
 
 .shop-left h2 {
@@ -148,19 +149,25 @@ button {
 /* Pravý sloupec s plakátem a cenou */
 .shop-right {
     display: flex;
-    height: auto; /* Výška sekce bude záviset na obrázku */
-    margin: 0; /* Zajistíme, že nebude žádná mezera kolem sekce */
+    align-items: center; /* Vertikální zarovnání uprostřed */
+    justify-content: center; /* Horizontální zarovnání */
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
+    height: auto; /* Výška pravého sloupce bude automaticky */
+    line-height: 0; /* Nastavení line-height na 0, aby se odstranily mezery */
 }
 
+/* Obrázek v pravém sloupci */
 .shop-image {
-    width: 100%;  /* Obrázek bude mít šířku 100% rodičovské sekce */
-    height: 100%; /* Obrázek bude mít výšku 100% rodičovské sekce */
-    width: 100%;  /* Obrázek bude mít šířku 100% rodičovské sekce */
-    height: auto; /* Výška se automaticky přizpůsobí šířce a zachová poměr stran */
+    width: 100%;  /* Obrázek zabere 100% šířky kontejneru */
+    height: auto; /* Automaticky přizpůsobí výšku, aby zachoval poměr stran */
     object-fit: cover; /* Zachová proporce obrázku a přizpůsobí jej kontejneru */
     object-position: center; /* Obrázek bude zarovnaný na střed */
+    display: block; /* Zajistí, že nebude žádná mezera pod obrázkem */
+    margin: 0; /* Zajistí, že obrázek nemá žádnou mezeru */
+    padding: 0; /* Zajistí, že obrázek nemá žádný vnitřní okraj */
+    vertical-align: bottom; /* Odstraní mezeru způsobenou inline elementem */
 }
 
 footer {
