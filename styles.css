@@ -157,6 +157,10 @@ button {
 .shop-image {
     width: 100%;  /* Obrázek bude mít šířku 100% rodičovské sekce */
     height: 100%; /* Obrázek bude mít výšku 100% rodičovské sekce */
+    width: 100%;  /* Obrázek bude mít šířku 100% rodičovské sekce */
+    height: auto; /* Výška se automaticky přizpůsobí šířce a zachová poměr stran */
+    object-fit: cover; /* Zachová proporce obrázku a přizpůsobí jej kontejneru */
+    object-position: center; /* Obrázek bude zarovnaný na střed */
 }
 
 footer {
