@@ -64,10 +64,14 @@ header {
 
 /* Sekce s projektem */
 .project-section {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
     display: grid;
-    grid-template-columns: 0.5fr 2fr 1fr; /* Levý sloupec je užší (0.5fr), prostřední širší (2fr), pravý stejný (1fr) */
+    grid-template-columns: 0.1fr 2.9fr 1fr; /* Levý sloupec je užší (0.5fr), prostřední širší (2fr), pravý stejný (1fr) */
     align-items: start;
     max-width: 100%; /* Zabrání tomu, aby přesahovalo šířku stránky */
+    position: relative;
 }
 
 /* Název projektu v prvním sloupci */
@@ -76,6 +80,8 @@ header {
     align-items: left;
     justify-content: left;
     text-align: left;
+    position: relative;
+    padding-left: 20px;
 }
 
 /* Galerie v druhém sloupci - obsahuje jeden obrázek */
@@ -113,14 +119,21 @@ header {
 
 /* Základní styl tlačítek */
 button {
+    all: unset; /* Resetuje všechny výchozí styly */
+    display: inline-block;
+    box-sizing: border-box; /* Správné počítání šířky a výšky */
     padding: 5px 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #161616;
     cursor: pointer;
 }
 
 /* Popis projektu ve třetím sloupci */
 .project-description {
     text-align: left;
+    text-align: justify;
+    word-spacing: 0.02em; /* Jemné přidání rozestupu mezi slova */
+    letter-spacing: 0.01em; /* Jemné přidání rozestupu mezi písmena */
+    text-justify: auto; /* Optimalizuje mezery, aby byly co nejméně nápadné */
 }
 
 /* Nová sekce SHOP */
@@ -132,6 +145,10 @@ button {
     border-top: 1px solid #161616;
     border-bottom: 1px solid #161616;
     box-sizing: border-box;
+    width: 100%; /* Zajistíme, že sekce nebude širší než 100% */
+    max-width: 100%; /* Zabrání sekci, aby přesahovala šířku displeje */
+    overflow: hidden; /* Zabrání vizuálnímu přesahování obsahu */
+    margin: 0 auto; /* Ujistíme se, že sekce bude centrována na obrazovce */
 }
 
 /* Levý sloupec s nápisem SHOP */
@@ -140,7 +157,9 @@ button {
     justify-content: center;
     align-items: center;
     border-right: 1px solid #161616; /* Čára mezi sloupci */
-    height: 100%;
+    height: 100%; /* Udržuje 100% výšku v sekci */
+    aspect-ratio: 1; /* Zajistí, že levý sloupec má čtvercový tvar */
+    box-sizing: border-box;
 }
 
 .shop-left h2 {
@@ -155,20 +174,20 @@ button {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    height: auto; /* Výška pravého sloupce bude automaticky */
-    line-height: 0; /* Nastavení line-height na 0, aby se odstranily mezery */
+    height: 100%; /* Udržuje 100% výšku v sekci */
+    aspect-ratio: 1; /* Zajistí, že levý sloupec má čtvercový tvar */
+    box-sizing: border-box;
 }
 
 /* Obrázek v pravém sloupci */
 .shop-image {
     width: 100%;  /* Obrázek zabere 100% šířky kontejneru */
-    height: auto; /* Automaticky přizpůsobí výšku, aby zachoval poměr stran */
+    height: 100%;
     object-fit: cover; /* Zachová proporce obrázku a přizpůsobí jej kontejneru */
     object-position: center; /* Obrázek bude zarovnaný na střed */
     display: block; /* Zajistí, že nebude žádná mezera pod obrázkem */
     margin: 0; /* Zajistí, že obrázek nemá žádnou mezeru */
     padding: 0; /* Zajistí, že obrázek nemá žádný vnitřní okraj */
-    vertical-align: bottom; /* Odstraní mezeru způsobenou inline elementem */
 }
 
 /* Nová galerie v dolní části */
@@ -214,9 +233,9 @@ footer {
     bottom: 0;
     width: 100%; /* Zápatí zabírá celou šířku stránky */
     border-top: 1px solid #161616; /* rámeček */
-  }
+}
   
-  footer p {
+footer p {
     margin: 0; /* Odstraní výchozí okraje p tagu */
     font-size: 2em; /* Nastavení velikosti písma */
 }  
@@ -225,7 +244,7 @@ footer {
 @media screen and (max-width: 768px) {
     /* Samotný text - dvě identické části pro nekonečné posouvání */
 .scrolling-text span {
-    font-size: 1em;
+        font-size: 1em;
     }
     
     .column {
@@ -234,17 +253,45 @@ footer {
     }
 
     .logo {
-    padding: 3px;
-    margin: 3px;
-  }
-
-     .shop-section {
-        grid-template-columns: 1fr; /* Sloupce budou pod sebou */
-        height: auto; /* Výška bude automatická, aby se přizpůsobila obsahu */
+        width: 99%; /* Zmenší šířku loga na mobilu, aby bylo od krajů */
+        margin-left: auto; /* Zajistí, že logo bude mít prostor zleva */
+        margin-right: auto; /* Zajistí, že logo bude mít prostor zprava */
+        padding: 0; /* Odstraní padding na mobilu */
     }
 
-    .shop-left, .shop-right {
-        border-right: none; /* Odstraníme čáru mezi sloupci, protože sloupce jsou nyní pod sebou */
-        height: auto; /* Výška bude automatická, aby se přizpůsobila obsahu */
+    .project-section {
+        grid-template-columns: 1fr; /* Každý sloupec bude mít šířku 100% */
+        padding-left: 5px;  /* Padding 3px zleva */
+        padding-right: 5px; /* Padding 3px zprava */
+        margin-bottom: 60px;
+    }
+
+    .project-description {
+        margin-top: 60px; /* Přidá 60px mezeru nad popisem projektu na mobilu */
+        padding-left: 60px;
+        padding-right: 30px;
+        box-sizing: border-box;
+    }
+
+    .shop-section {
+        grid-template-columns: 1fr; /* Sloupce budou pod sebou */
+        height: auto; /* Sekce se přizpůsobí obsahu a nebude přesahovat */
+    }
+
+    .shop-left {
+        aspect-ratio: 1; /* Udrží čtvercový tvar pro levý sloupec na mobilu */
+        width: 100%; /* Zajistí, že levý sloupec zabírá celou šířku */
+        height: auto; /* Výška se přizpůsobí podle šířky */
+    }
+
+    .shop-right {
+        aspect-ratio: 1; /* Zajistí, že pravý sloupec má čtvercový tvar */
+        border-right: none; /* Odstraní čáru mezi sloupci na mobilu */
+        border-top: 1px solid #161616; /* Přidá čáru mezi sloupci nahoře */
+    }
+
+    .shop-image {
+        width: 100%; /* Obrázek bude zabírat celou šířku na mobilu */
+        height: auto; /* Automaticky upraví výšku podle šířky */
     }
 }
