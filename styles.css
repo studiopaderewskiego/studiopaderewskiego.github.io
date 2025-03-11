@@ -62,59 +62,55 @@ header {
     object-fit: cover; /* Logo se roztáhne na celou šířku a případně ořízne, aby se přizpůsobilo sekci */
 }
 
-/* Sekce s projektem */
+/* Základní styl pro celou sekci projektu */
 .project-section {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 20px;
-    display: grid;
-    grid-template-columns: 0.1fr 2.9fr 1fr; /* Levý sloupec je užší (0.5fr), prostřední širší (2fr), pravý stejný (1fr) */
-    align-items: start;
-    max-width: 100%; /* Zabrání tomu, aby přesahovalo šířku stránky */
-    position: relative;
+    position: relative; /* Sekce musí mít pozicování, aby se gradient správně umístil */
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+    z-index: 0; /* Sekce má nižší z-index, aby gradient byl nad ní */
 }
 
-/* Název projektu v prvním sloupci */
+/* Tlustá čára se sněhově modrým gradientem na začátku sekce */
+.gradient-line {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    right: 20px;
+    height: 40px;
+    background: linear-gradient(to bottom, rgba(163, 216, 244, 1), rgba(163, 216, 244, 0));
+    z-index: 0;
+}
+
+/* Pro sloupec s názvem projektu */
 .project-title {
     display: flex;
-    align-items: left;
-    justify-content: left;
-    text-align: left;
-    position: relative;
-    padding-left: 20px;
-}
-
-/* Galerie v druhém sloupci - obsahuje jeden obrázek */
-.project-gallery {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
+    align-items: flex-start;
+    z-index: 2;
 }
 
-.project-gallery img {
-    max-width: 100%;  /* Obrázek se přizpůsobí šířce kontejneru */
-    height: auto;     /* Udržuje poměr stran */
-}
-
-/* Skrýváme všechny obrázky, kromě toho, který je aktivní */
-.project-image {
-    display: none;
-    max-width: 100%;
+/* Pro druhý sloupec (galerie) na mobilu */
+.project-gallery {
+    width: 100%; /* Galerie zabere celý sloupec */
     height: auto;
+    justify-content: center; /* Vertikálně zarovná obsah do středu */
+    align-items: center; /* Horizontálně zarovná obsah do středu */
+    flex-direction: column; /* Obsah bude seřazen vertikálně */
+    display: flex; /* Flexbox pro správné zarovnání */
 }
 
-/* Zobrazíme pouze obrázek s třídou "active" */
-.project-image.active {
-    display: block;
+/* Pro obrázky v galerii */
+.project-gallery img {
+    max-width: 100%; /* Umožní obrázku přizpůsobit se šířce kontejneru */
+    height: auto; /* Udržuje poměr stran */
+    display: none;
 }
 
-/* Kontejner tlačítek */
-.button-container {
-    margin-top: 10px;
-    display: flex;
-    gap: 10px;
-    justify-content: center;
+.project-gallery img.active {
+    display: block; /* Zobrazí pouze obrázek s třídou "active" */
 }
 
 /* Základní styl tlačítek */
@@ -127,13 +123,39 @@ button {
     cursor: pointer;
 }
 
-/* Popis projektu ve třetím sloupci */
+/* Popis projektu */
 .project-description {
+    padding-left: 20px;
+    padding-right: 20px;
+    right: 20px;
+    width: 50%;
+    box-sizing: border-box;
+    position: relative;
     text-align: left;
-    text-align: justify;
-    word-spacing: 0.02em; /* Jemné přidání rozestupu mezi slova */
-    letter-spacing: 0.01em; /* Jemné přidání rozestupu mezi písmena */
-    text-justify: auto; /* Optimalizuje mezery, aby byly co nejméně nápadné */
+    flex-direction: column;
+    justify-content: flex-start; /* Zarovná text na spodní část */
+}
+
+/* Na počítači (pokud nechcete použít media query) */
+.project-section {
+    display: flex; /* Flexbox pro zarovnání v rámci sekce */
+}
+
+.project-description {
+    display: flex; /* Flexbox pro zarovnání */
+    flex-direction: column;
+    justify-content: flex-end; /* Zarovná text na spodní část */
+}
+
+/* Tlustá čára pod popisem projektu */
+.gradient-line-bottom-description {
+    position: absolute;
+    bottom: -20px;
+    left: 20px;
+    right: 20px;
+    height: 40px;
+    background: linear-gradient(to top, rgba(163, 216, 244, 1), rgba(163, 216, 244, 0));
+    z-index: 1;
 }
 
 /* Nová sekce SHOP */
@@ -190,40 +212,70 @@ button {
     padding: 0; /* Zajistí, že obrázek nemá žádný vnitřní okraj */
 }
 
-/* Nová galerie v dolní části */
-.new-gallery-section {
-    display: grid;
-    grid-template-columns: 0.5fr 2fr; /* Levý sloupec je užší (0.5fr), prostřední širší (2fr), pravý stejný (1fr) */
-    align-items: start;
-    max-width: 100%; /* Zabrání tomu, aby přesahovalo šířku stránky */
-}
-
-/* Název projektu v prvním sloupci */
-.new-gallery-title {
-    display: flex;
-    align-items: left;
-    justify-content: left;
-    text-align: left;
-}
-
-/* Galerie v druhém sloupci - obsahuje jeden obrázek */
-.new-gallery {
+/* Kontejner galerie */
+.gallery-container {
+    background-color: #d4f4dd; /* Světle zelená barva pozadí */
     display: flex;
     align-items: center;
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Otočený text vlevo */
+  .rotated-text {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-size: 18px; /* Menší písmo pro mobil */
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Wrapper pro obrázky */
+  .gallery-wrapper {
+    flex-grow: 1;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    display: flex;
+    -webkit-overflow-scrolling: touch; /* Lepší posouvání na iOS */
+    padding-bottom: 20px; /* Rezerva na mobilu */
+  }
+  
+  /* Horizontální galerie */
+  .gallery {
+    display: flex;
+    gap: 10px; /* Mezera mezi obrázky */
+  }
+  
+  .gallery img {
+    height: 60vh; /* Přizpůsobení mobilní výšce */
+    object-fit: contain;
+  }
+  
+  .arrow-right {
+    font-size: 48px; /* Zvýšení velikosti šipky */
+    cursor: pointer;
+    position: absolute;
+    right: 15px; /* Vzdálenost od pravého okraje displeje */
+    top: 50%;
+    transform: translateY(-55%); /* Posunutí šipky výš uvnitř kruhu */
+    z-index: 10;
+    user-select: none; /* Zamezí nechtěnému výběru textu */
+    
+    /* Styl pro kruh kolem šipky */
+    width: 60px; /* Velikost kruhu */
+    height: 60px; /* Velikost kruhu */
+    border-radius: 50%; /* Udělá z něj kruh */
+    background-color: white; /* Bílá barva pozadí */
+    display: flex;
     justify-content: center;
-    flex-direction: column;
-}
-
-.new-gallery-image {
-    display: none;
-    max-width: 100%;
-    height: auto;
-}
-
-/* Zobrazíme pouze obrázek s třídou "active" */
-.new-gallery-image.active {
-    display: block;
-}
+    align-items: flex-start; /* Zarovnání šipky výše uvnitř kruhu */
+    
+    /* Tenká čára kolem kruhu */
+    border: 1px solid black; /* Tenká čára kolem kruhu */
+  }  
 
 footer {
     color: #161616; /* Bílý text */
@@ -253,25 +305,70 @@ footer p {
     }
 
     .logo {
-        width: 99%; /* Zmenší šířku loga na mobilu, aby bylo od krajů */
+        width: 93%; /* Zmenší šířku loga na mobilu, aby bylo od krajů */
         margin-left: auto; /* Zajistí, že logo bude mít prostor zleva */
         margin-right: auto; /* Zajistí, že logo bude mít prostor zprava */
         padding: 0; /* Odstraní padding na mobilu */
     }
 
-    .project-section {
-        grid-template-columns: 1fr; /* Každý sloupec bude mít šířku 100% */
-        padding-left: 5px;  /* Padding 3px zleva */
-        padding-right: 5px; /* Padding 3px zprava */
-        margin-bottom: 60px;
-    }
+    /* Sekce s projektem */
+.project-section {
+    position: relative;
+    grid-template-columns: 1fr; /* Každý sloupec bude mít šířku 100% */
+    padding-left: 5px;  /* Padding 5px zleva */
+    padding-right: 5px; /* Padding 5px zprava */
+    display: grid; /* Dáváme grid pro zarovnání */
+    max-width: 100%; /* Zabrání tomu, aby obsah přesahoval šířku obrazovky */
+    overflow-x: hidden; /* Zamezí horizontálnímu posuvu v této sekci */
+}
 
-    .project-description {
-        margin-top: 60px; /* Přidá 60px mezeru nad popisem projektu na mobilu */
-        padding-left: 60px;
-        padding-right: 30px;
-        box-sizing: border-box;
-    }
+/* Tlustá čára se sněhově modrým gradientem a průhledností */
+.gradient-line {
+    position: absolute; /* Absolutní pozicování */
+    top: 0; /* Umístíme ji na začátek sekce */
+    left: 20px; /* Čára půjde až k levému okraji */
+    right: 20px; /* Čára půjde až k pravému okraji */
+    height: 40px; /* Tloušťka čáry */
+    background: linear-gradient(to bottom, rgba(163, 216, 244, 1), rgba(163, 216, 244, 0)); /* Sněhově modrý gradient s průhledností */
+    z-index: 1;
+}
+
+/* Zarovnání pro první sloupec (levý text) */
+.project-title {
+    position: relative;
+    display: flex;
+    left: 20px;
+    flex-direction: column; /* Umožňuje, aby se obsah v levém sloupci seřadil vertikálně */
+    align-items: flex-start;
+    z-index: 2;
+}
+
+/* Pro druhý sloupec (galerie) */
+.project-gallery {
+    height: auto;
+    justify-content: center; /* Zajistí, že galerie je vertikálně zarovnána do středu */
+    flex-direction: column; /* Umožňuje seřazení galerii pod sebou */
+}
+
+/* Popis projektu */
+.project-description {
+    margin-top: 60px; /* Přidá 60px mezeru nad popisem projektu na mobilu */
+    padding-left: 100px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    position: relative; /* Abychom mohli přidat svislou čáru */
+}
+
+/* Tlustá čára se sněhově modrým gradientem a průhledností pod popisem projektu */
+.gradient-line-bottom-description {
+    position: absolute; /* Absolutní pozicování */
+    bottom: -20px; /* Umístíme čáru těsně pod popisem */
+    left: 100px; /* Čára půjde až k levému okraji */
+    right: 20px; /* Čára půjde až k pravému okraji */
+    height: 40px; /* Tloušťka čáry */
+    background: linear-gradient(to top, rgba(163, 216, 244, 1), rgba(163, 216, 244, 0)); /* Neonový efekt (světlá modrá -> průhledná) */
+    z-index: 1; /* Aby čára byla pod textem popisu, ale nad pozadím */
+}
 
     .shop-section {
         grid-template-columns: 1fr; /* Sloupce budou pod sebou */
@@ -293,5 +390,13 @@ footer p {
     .shop-image {
         width: 100%; /* Obrázek bude zabírat celou šířku na mobilu */
         height: auto; /* Automaticky upraví výšku podle šířky */
+    }
+
+    .gallery img {
+        width: 70vw; /* Obrázky budou stále 50% šířky obrazovky */
+      }
+    
+    .gallery-wrapper {
+        justify-content: flex-start; /* Galerie začíná na levé straně */
     }
 }
