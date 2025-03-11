@@ -1,60 +1,34 @@
-// Získání všech obrázků
-const images = document.querySelectorAll('.project-image');
-let currentIndex = 0;
+<div class="gallery-container">
+    <!-- Otočený text vlevo -->
+    <div class="rotated-text">
+      Piktogramy letiště
+    </div>
+  
+    <!-- Horizontální galerie -->
+    <div class="gallery-wrapper">
+      <div class="gallery">
+        <img src="images/Odlet.svg" alt="Obrázek 4" class="new-gallery-image active">
+        <img src="images/Prilet.svg" alt="Obrázek 5" class="new-gallery-image">
+        <img src="images/kontrola_zavazadel.svg" alt="Obrázek 6" class="new-gallery-image">
+        <img src="images/vlevo_vpravo.svg" alt="Obrázek 6" class="new-gallery-image">
+        <img src="images/prebalovani.svg" alt="Obrázek 6" class="new-gallery-image">
+        <img src="images/cekarna.svg" alt="Obrázek 6" class="new-gallery-image">
+        <img src="images/zavazadlo_na_pase.svg" alt="Obrázek 6" class="new-gallery-image">
+        <img src="images/kontrola_dokladu.svg" alt="Obrázek 6" class="new-gallery-image">
+        <img src="images/nakupni_taska.svg" alt="Obrázek 6" class="new-gallery-image">
+        <img src="images/cigareta.svg" alt="Obrázek 6" class="new-gallery-image">
+        <img src="images/info.svg" alt="Obrázek 6" class="new-gallery-image">
+        <img src="images/sipka.svg" alt="Obrázek 6" class="new-gallery-image">
+        <img src="images/zavazadlo.svg" alt="Obrázek 6" class="new-gallery-image">
+        <img src="images/kaple.svg" alt="Obrázek 6" class="new-gallery-image">
+        <img src="images/zeny.svg" alt="Obrázek 6" class="new-gallery-image">
+        <img src="images/muzi.svg" alt="Obrázek 6" class="new-gallery-image">
+        <!-- Přidej další obrázky až po piktogram 16 -->
+    </div>
+</div>
 
-// Získání tlačítek
-const prevBtn = document.getElementById('prev-btn');
-const nextBtn = document.getElementById('next-btn');
-
-// Funkce na zobrazení obrázku podle indexu
-function showImage(index) {
-    images.forEach((img, i) => {
-        img.classList.remove('active'); // Skryje všechny obrázky
-    });
-    images[index].classList.add('active'); // Zobrazí obrázek s daným indexem
-}
-
-// Přepnutí na předchozí obrázek
-prevBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex - 1 + images.length) % images.length; // Cyklování zpět
-    showImage(currentIndex);
-});
-
-// Přepnutí na další obrázek
-nextBtn.addEventListener('click', () => {
-    currentIndex = (currentIndex + 1) % images.length; // Cyklování dopředu
-    showImage(currentIndex);
-});
-
-// Zobraz první obrázek na začátku
-showImage(currentIndex);
-
-document.addEventListener('DOMContentLoaded', function () {
-    let currentIndexNew = 0;
-    const imagesNew = document.querySelectorAll('.new-gallery-image');
-    const prevButtonNew = document.getElementById('prev-btn-new');
-    const nextButtonNew = document.getElementById('next-btn-new');
-
-    function showImageNew(index) {
-        // Skrytí všech obrázků
-        imagesNew.forEach(img => img.classList.remove('active'));
-        
-        // Zobrazení obrázku podle aktuálního indexu
-        imagesNew[index].classList.add('active');
-    }
-
-    // Funkce pro přechod na předchozí obrázek
-    prevButtonNew.addEventListener('click', function () {
-        currentIndexNew = (currentIndexNew === 0) ? imagesNew.length - 1 : currentIndexNew - 1;
-        showImageNew(currentIndexNew);
-    });
-
-    // Funkce pro přechod na další obrázek
-    nextButtonNew.addEventListener('click', function () {
-        currentIndexNew = (currentIndexNew === imagesNew.length - 1) ? 0 : currentIndexNew + 1;
-        showImageNew(currentIndexNew);
-    });
-
-    // Inicializace zobrazení prvního obrázku
-    showImageNew(currentIndexNew);
-});
+<!-- Šipka napravo pro posouvání -->
+<div class="arrow-right">
+  →
+</div>
+</div>
