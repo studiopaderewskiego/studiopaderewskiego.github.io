@@ -308,10 +308,13 @@ footer p {
         width: 93%; /* Zmenší šířku loga na mobilu, aby bylo od krajů */
         margin-left: auto; /* Zajistí, že logo bude mít prostor zleva */
         margin-right: auto; /* Zajistí, že logo bude mít prostor zprava */
-        padding: 0; /* Odstraní padding na mobilu */
+        padding-left: 5px; /* Stejné odsazení zleva jako v .project-section */
+        padding-right: 5px; /* Stejné odsazení zprava jako v .project-section */
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
-    /* Sekce s projektem */
+/* Sekce s projektem */
 .project-section {
     position: relative;
     grid-template-columns: 1fr; /* Každý sloupec bude mít šířku 100% */
