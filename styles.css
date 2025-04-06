@@ -8,32 +8,6 @@ body {
     min-height: 100vh; /* zajistí, že stránka bude mít minimální výšku 100% okna */
 }
 
-/* Kontejner pro posouvající se text */
-.scrolling-text {
-    display: flex;
-    overflow: hidden; /* Skryje obsah mimo viditelnou oblast */
-    white-space: nowrap; /* Zabraňuje zalomení textu na více řádků */
-}
-
-/* Samotný text - dvě identické části pro nekonečné posouvání */
-.scrolling-text span {
-    display: inline-block;
-    padding-right: 10px; /* Bez mezery mezi texty */
-    animation: scroll 60s linear infinite; /* Plynulá animace pro rolování textu */
-    font-size: 2em;
-    text-transform: uppercase;
-}
-
-/* Definice animace */
-@keyframes scroll {
-    0% {
-        transform: translateX(0); /* Text začíná na začátku */
-    }
-    100% {
-        transform: translateX(-100%); /* Posune text o přesně jednu šířku textu */
-    }
-}
-
 /* Základní styl pro celou sekci projektu */
 .project-section {
     position: relative; /* Sekce musí mít pozicování, aby se gradient správně umístil */
