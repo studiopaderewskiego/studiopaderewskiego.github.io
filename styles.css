@@ -44,24 +44,6 @@ header {
     }
 }
 
-/* Sekce pro logo */
-.logo-section {
-    width: 100%; /* Logo pokryje 100% šířky stránky */
-    display: flex; /* Flexbox pro snadné zarovnání obsahu */
-    justify-content: center; /* Logo zarovnáno horizontálně na střed */
-}
-
-/* Styl pro logo */
-.logo {
-    width: 100%; /* Logo se přizpůsobí šířce sekce */
-    padding: 10px; /* Přidá prostor uvnitř obrázku */
-    margin: 10px; /* Přidá prostor kolem obrázku */
-    display: block; /* Zajistí, že obrázek nebude mít žádné mezery kolem */
-    max-width: 100%; /* Zabrání tomu, aby logo přesahovalo šířku stránky */
-    height: auto; /* Automaticky upraví výšku podle šířky */
-    object-fit: cover; /* Logo se roztáhne na celou šířku a případně ořízne, aby se přizpůsobilo sekci */
-}
-
 /* Základní styl pro celou sekci projektu */
 .project-section {
     position: relative; /* Sekce musí mít pozicování, aby se gradient správně umístil */
@@ -302,16 +284,6 @@ footer p {
     .column {
         width: 100%; /* Sloupce budou mít 100% šířky na mobilních zařízeních */
         margin: 0px auto;
-    }
-
-    .logo {
-        width: 93%; /* Zmenší šířku loga na mobilu, aby bylo od krajů */
-        margin-left: auto; /* Zajistí, že logo bude mít prostor zleva */
-        margin-right: auto; /* Zajistí, že logo bude mít prostor zprava */
-        padding-left: 5px; /* Stejné odsazení zleva jako v .project-section */
-        padding-right: 5px; /* Stejné odsazení zprava jako v .project-section */
-        padding-top: 0;
-        padding-bottom: 0;
     }
 
 /* Sekce s projektem */
