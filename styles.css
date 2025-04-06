@@ -8,16 +8,6 @@ body {
     min-height: 100vh; /* zajistí, že stránka bude mít minimální výšku 100% okna */
 }
 
-/* Styl pro hlavičku stránky */
-header {
-    text-align: center;
-    padding: 0px;
-    position: relative;
-    z-index: 10;
-    border-bottom: 1px solid #161616; /* rámeček */
-    background-color: transparent; /* Záhlaví bude průhledné, aby ukázalo pozadí */
-}
-
 /* Kontejner pro posouvající se text */
 .scrolling-text {
     display: flex;
